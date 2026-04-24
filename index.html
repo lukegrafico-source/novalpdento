@@ -14,40 +14,28 @@
 <style>
 @font-face{font-family:"Cairo";font-style:normal;font-weight:200 1000;font-display:swap;src:url("https://fonts.gstatic.com/s/cairo/v28/SLXgc1nY6HkvangtZmpQdkhzfH5lkSs2SgRjCAGMQ1z0hOA-W1ToLQ-HmkA.woff2") format("woff2")}
 :root{
-  --navy-deep: oklch(0.18 0.03 240);
-  --navy: oklch(0.24 0.04 240);
-  --navy-light: oklch(0.32 0.045 235);
-  --cyan-glow: oklch(0.82 0.12 220);
   --background: oklch(0.13 0.025 245);
   --foreground: oklch(0.96 0.01 220);
-  --primary: #22d3ee;
-  --primary-foreground: oklch(0.15 0.03 240);
-  --accent: #0891b2;
-  --muted-foreground: oklch(0.72 0.02 220);
-  --gradient-text: linear-gradient(180deg, #ffffff 0%, #22d3ee 100%);
-  --gradient-cyan: linear-gradient(135deg, #22d3ee 0%, #0891b2 100%);
+  --cyan-vibrant: #22d3ee;
+  --cyan-deep: #0891b2;
 }
 html{scroll-behavior:smooth}
 body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color:var(--foreground);-webkit-font-smoothing:antialiased}
-.text-gradient{background:var(--gradient-text);-webkit-background-clip:text;background-clip:text;color:transparent}
-.text-gradient-cyan{background:var(--gradient-cyan);-webkit-background-clip:text;background-clip:text;color:transparent}
-.tech-line{background:linear-gradient(90deg,transparent,oklch(0.82 0.12 220 / 0.6),transparent);height:1px}
-.grid-pattern{background-image:linear-gradient(oklch(1 0 0 / 0.04) 1px,transparent 1px),linear-gradient(90deg,oklch(1 0 0 / 0.04) 1px,transparent 1px);background-size:60px 60px}
+.text-gradient{background: linear-gradient(180deg, #ffffff 0%, #22d3ee 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.text-gradient-cyan{background: linear-gradient(135deg, #22d3ee 0%, #0891b2 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grid-pattern{background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:60px 60px}
 .reveal{opacity:0;transform:translateY(24px);animation:reveal .9s cubic-bezier(.22,1,.36,1) forwards}
 .reveal-delay-1{animation-delay:.1s}.reveal-delay-2{animation-delay:.25s}.reveal-delay-3{animation-delay:.4s}
 @keyframes reveal{to{opacity:1;transform:translateY(0)}}
-@keyframes float-slow{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.float-slow{animation:float-slow 6s ease-in-out infinite}
-.pulse-glow{animation:pulse-glow 4s ease-in-out infinite}
-@keyframes pulse-glow{0%,100%{box-shadow:0 0 30px rgba(34,211,238,0.2)}50%{box-shadow:0 0 50px rgba(34,211,238,0.5)}}
 .glass{background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.08)}
 .glass-strong{background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03));backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.12)}
+.tech-line{background:linear-gradient(90deg,transparent,rgba(34,211,238,0.4),transparent);height:1px}
 </style>
 </head>
-<body class="bg-background text-foreground">
+<body>
 
 <div class="fixed inset-0 -z-10 opacity-50" style="background-image:url(assets/background.png);background-size:cover;background-position:center;background-attachment:fixed"></div>
-<div class="fixed inset-0 -z-10 bg-gradient-to-b from-[rgba(20,24,35,0.85)] to-[rgba(20,24,35,1)]"></div>
+<div class="fixed inset-0 -z-10 bg-gradient-to-b from-black/80 to-black"></div>
 <div class="fixed inset-0 -z-10 grid-pattern opacity-25"></div>
 
 <header class="relative z-20">
@@ -63,7 +51,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
   <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-12">
     <div class="lg:col-span-6">
       <div class="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-[#22d3ee]/30 bg-[#22d3ee]/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[#22d3ee]">
-        <span class="h-1.5 w-1.5 rounded-full bg-[#22d3ee] pulse-glow"></span>
+        <span class="h-1.5 w-1.5 rounded-full bg-[#22d3ee]"></span>
         Pré-lançamento exclusivo
       </div>
       <h1 class="reveal reveal-delay-1 text-5xl font-extrabold leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
@@ -71,14 +59,13 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
         <span class="text-gradient mt-2 block">Abutment Triplo</span>
       </h1>
       <p class="reveal reveal-delay-2 mt-6 max-w-xl text-lg font-light text-gray-400 md:text-xl">A nova era da implantodontia</p>
-      
       <div class="reveal reveal-delay-3 mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
         <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer" 
            class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-8 py-4 text-base font-bold text-black transition-all hover:scale-[1.05] shadow-[0_10px_40px_-10px_rgba(34,211,238,0.6)]"
            style="background: linear-gradient(90deg, #22d3ee 0%, #0891b2 100%);">
           Fale com um especialista
         </a>
-        <a href="tel:+5511995898239" class="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-base font-medium backdrop-blur-md transition-all hover:border-[#22d3ee]/50 hover:bg-[#22d3ee]/10 text-white">
+        <a href="tel:+5511995898239" class="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-base font-medium backdrop-blur-md transition-all hover:border-[#22d3ee]/50 text-white">
           +55 (11) 99589-8239
         </a>
       </div>
@@ -86,7 +73,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
     <div class="reveal reveal-delay-2 relative lg:col-span-6">
       <div class="relative mx-auto aspect-square max-w-[560px]">
         <div class="absolute inset-0 rounded-full blur-3xl opacity-20" style="background: radial-gradient(circle, #22d3ee, transparent 60%)"></div>
-        <img src="assets/produto.png" alt="T CONNECT" class="float-slow relative z-10 h-full w-full object-contain" style="filter: drop-shadow(0 20px 40px rgba(34,211,238,0.3))" />
+        <img src="assets/produto.png" alt="T CONNECT" class="relative z-10 h-full w-full object-contain" style="filter: drop-shadow(0 20px 40px rgba(34,211,238,0.3))" />
       </div>
     </div>
   </div>
@@ -104,25 +91,36 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
   </div>
 </section>
 
-<section class="relative px-6 py-16 lg:px-10 lg:py-24">
-  <div class="mx-auto max-w-7xl text-center">
-      <h2 class="text-4xl font-bold leading-tight md:text-6xl mb-6"><span class="text-gradient">Desempenho comprovado</span></h2>
-      <p class="mx-auto max-w-3xl text-lg text-gray-400 mb-12">Avaliado por análises FEA para máxima estabilidade.</p>
+<section class="relative px-6 py-16 lg:px-10 lg:py-24 text-center">
+  <div class="mx-auto max-w-7xl">
+    <h2 class="text-4xl font-bold leading-tight md:text-6xl mb-6"><span class="text-gradient">Desempenho comprovado</span></h2>
+    <p class="mx-auto max-w-3xl text-lg text-gray-400 mb-12">Avaliado por análises FEA simulando condições clínicas reais.</p>
 
-    <div class="mx-auto max-w-5xl">
-      <div class="glass-strong relative overflow-hidden rounded-2xl p-6">
-        <div class="mb-4 flex items-center justify-between border-b border-white/10 pb-4">
-          <div class="flex items-center gap-3">
-            <span id="chart-label" class="text-sm font-semibold uppercase text-[#22d3ee]"></span>
-          </div>
-          <span id="chart-code" class="font-mono text-xs text-gray-500"></span>
-        </div>
-        <div class="relative overflow-hidden rounded-xl bg-white/95">
-          <div id="chart-track" class="flex transition-transform duration-700 ease-out"></div>
-          <button id="chart-prev" class="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 bg-black/50 rounded-full text-[#22d3ee]">‹</button>
-          <button id="chart-next" class="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 bg-black/50 rounded-full text-[#22d3ee]">›</button>
-        </div>
-        <div id="chart-dots" class="mt-5 flex justify-center gap-2"></div>
+    <div class="mx-auto max-w-5xl glass-strong rounded-2xl p-6">
+      <div class="mb-4 flex items-center justify-between border-b border-white/10 pb-4 text-xs font-bold uppercase tracking-widest text-[#22d3ee]">
+        <span id="chart-label"></span>
+        <span id="chart-code" class="text-gray-500"></span>
+      </div>
+      <div class="relative overflow-hidden rounded-xl bg-white/95">
+        <div id="chart-track" class="flex transition-transform duration-700 ease-out"></div>
+        <button id="chart-prev" class="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 bg-black/50 rounded-full text-white">‹</button>
+        <button id="chart-next" class="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 bg-black/50 rounded-full text-white">›</button>
+      </div>
+      <div id="chart-dots" class="mt-5 flex justify-center gap-2"></div>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <div class="glass p-6 rounded-2xl text-left border border-white/5">
+        <div class="mb-4 h-10 w-10 flex items-center justify-center rounded-lg bg-[#22d3ee]/10 text-[#22d3ee]">✓</div>
+        <p class="text-sm text-gray-300">Distribuição equilibrada de tensões no sistema</p>
+      </div>
+      <div class="glass p-6 rounded-2xl text-left border border-white/5">
+        <div class="mb-4 h-10 w-10 flex items-center justify-center rounded-lg bg-[#22d3ee]/10 text-[#22d3ee]">✓</div>
+        <p class="text-sm text-gray-300">Comportamento biomecânico estável</p>
+      </div>
+      <div class="glass p-6 rounded-2xl text-left border border-white/5">
+        <div class="mb-4 h-10 w-10 flex items-center justify-center rounded-lg bg-[#22d3ee]/10 text-[#22d3ee]">✓</div>
+        <p class="text-sm text-gray-300">Níveis de estresse clinicamente aceitáveis</p>
       </div>
     </div>
 
@@ -130,95 +128,5 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
   </div>
 </section>
 
-<section class="relative px-6 py-20 lg:px-10 lg:py-32">
-  <div class="mx-auto max-w-5xl text-center">
-    <h2 class="text-4xl font-extrabold leading-tight md:text-6xl lg:text-7xl mb-8">
-      <span class="text-gradient">Leve sua performance clínica</span>
-      <span class="text-gradient-cyan mt-3 block">ao próximo nível</span>
-    </h2>
-    <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-400 md:text-xl mb-12">
-      Fale agora com um especialista e descubra como integrar o T Connect à sua prática.
-    </p>
-    <div class="flex flex-col items-center gap-6">
-      <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer" 
-         class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-12 py-5 text-xl font-bold text-black transition-all hover:scale-[1.05] shadow-[0_15px_40px_-10px_rgba(34,211,238,0.5)]"
-         style="background: linear-gradient(90deg, #22d3ee 0%, #0891b2 100%);">
-        Fale com um especialista
-      </a>
-      <img src="assets/logo-vertical.png" alt="Dentoflex" class="h-28 w-auto mt-16 opacity-80" />
-    </div>
-  </div>
-</section>
-
-<footer class="border-t border-white/5 py-10 text-center text-xs text-gray-500">
-  © <span id="year"></span> Dentoflex.inp · Todos os direitos reservados · T CONNECT
-</footer>
-
-<a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer" 
-   class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full text-black shadow-lg transition-transform hover:scale-110"
-   style="background: linear-gradient(135deg, #22d3ee, #0891b2);">
-  <svg viewBox="0 0 24 24" class="h-8 w-8" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.04 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.453 3.488z"/></svg>
-</a>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
-/* Diferenciais Corrigidos */
-const diffs = [
-  {t:"Paraboloide hiperbólico", d:"Alta rigidez e menos tensão"},
-  {t:"3 coroas, 1 implante", d:"Múltiplas reabilitações"},
-  {t:"Sem cantilever", d:"Melhor comportamento mecânico"},
-  {t:"Sem soldas", d:"Menos riscos de distorções protéticas"},
-];
-const toothIcon = '<svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="#22d3ee" stroke-width="1.6"><path d="M12 2.5c-2.8 0-5 1.6-5 4 0 1.4.5 2.4.9 3.5.5 1.4.7 2.7.6 4.1-.1 1.6-.4 3-.6 4.7-.2 1.6.4 2.7 1.5 2.7 1 0 1.4-.7 1.6-1.7l.5-2.7c.1-.7.5-1.1 1-1.1.4 0 .8.4 1 1.1l.5 2.7c.2 1 .6 1.7 1.6 1.7 1.1 0 1.7-1.1 1.5-2.7-.2-1.7-.5-3.1-.6-4.7-.1-1.4.1-2.7.6-4.1.4-1.1.9-2.1.9-3.5 0-2.4-2.2-4-5-4z"/></svg>';
-
-document.getElementById('diferenciais').innerHTML = diffs.map((it, i) => `
-  <div class="glass p-7 rounded-2xl border border-white/10 hover:border-[#22d3ee]/40 transition-all">
-    <div class="flex justify-between items-center mb-5">
-      <div class="h-12 w-12 flex items-center justify-center rounded-xl bg-[#22d3ee]/10 text-[#22d3ee]">${toothIcon}</div>
-      <span class="font-mono text-xs text-[#22d3ee]/60">0${i+1}</span>
-    </div>
-    <h3 class="text-xl font-bold text-white mb-4">${it.t}</h3>
-    <p class="text-sm text-gray-400">${it.d}</p>
-  </div>`).join('');
-
-/* Carousel Gráficos */
-const charts = [
-  {src:"assets/grafico-cc.png", label:"Análise FEA — CC", code:"FEA-001"},
-  {src:"assets/grafico-da.png", label:"Análise FEA — DA", code:"FEA-002"},
-  {src:"assets/grafico-mesh.png", label:"Mesh Convergence — TA", code:"FEA-003"},
-];
-let cIdx = 0;
-const cTrack = document.getElementById('chart-track');
-const cDots = document.getElementById('chart-dots');
-
-cTrack.innerHTML = charts.map(c=>`<div class="min-w-full p-4"><img src="${c.src}" alt="${c.label}" class="mx-auto h-auto w-full object-contain"></div>`).join('');
-
-function renderChart(){
-  cTrack.style.transform = `translateX(-${cIdx*100}%)`;
-  document.getElementById('chart-label').textContent = charts[cIdx].label;
-  document.getElementById('chart-code').textContent = charts[cIdx].code;
-  cDots.innerHTML = charts.map((_,i)=>`<div class="h-1.5 rounded-full transition-all ${i===cIdx?'w-8 bg-[#22d3ee]':'w-3 bg-white/20'}"></div>`).join('');
-}
-document.getElementById('chart-prev').onclick=()=>{cIdx=(cIdx-1+charts.length)%charts.length;renderChart();};
-document.getElementById('chart-next').onclick=()=>{cIdx=(cIdx+1)%charts.length;renderChart();};
-renderChart();
-
-/* Papers Grid */
-const papers = [
-  {src:"assets/paper-bea.png", title:"Biomedical Engineering Advances", journal:"Elsevier · ISSN 2667-0992"},
-  {src:"assets/paper-ijmir.png", title:"Biomechanical Evaluation of Triple Abutment System", journal:"IJMIR · 2026"},
-  {src:"assets/paper-perio.png", title:"Innovative Double or Triple Dental Abutment-Implant", journal:"Perio Advances · 2024"},
-];
-
-document.getElementById('papers-grid').innerHTML = papers.map(p => `
-  <div class="glass p-5 rounded-2xl text-left hover:border-[#22d3ee]/40 transition-all group">
-    <img src="${p.src}" class="w-full aspect-[3/4] object-cover rounded-lg mb-4 grayscale group-hover:grayscale-0 transition-all">
-    <span class="text-[10px] font-mono text-[#22d3ee] uppercase tracking-widest">Artigo Científico</span>
-    <h3 class="text-sm font-bold mt-2 text-white line-clamp-2">${p.title}</h3>
-    <p class="text-[11px] text-gray-500 mt-1">${p.journal}</p>
-  </div>`).join('');
-
-</script>
-</body>
-</html>
+<section class="relative px-6 py-16 lg:px-10 lg:py-24">
+  <div class="mx-auto max-w-7xl">
