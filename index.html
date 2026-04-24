@@ -82,6 +82,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
 </head>
 <body>
 
+<!-- Backgrounds -->
 <div class="fixed inset-0 -z-10 opacity-50" style="background-image:url(assets/background.png);background-size:cover;background-position:center;background-attachment:fixed"></div>
 <div class="fixed inset-0 -z-10 bg-gradient-to-b from-[oklch(0.13_0.025_245/0.85)] via-[oklch(0.13_0.025_245/0.75)] to-[oklch(0.13_0.025_245)]"></div>
 <div class="fixed inset-0 -z-10 grid-pattern opacity-25"></div>
@@ -96,6 +97,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
   <div class="geo-shine" style="bottom:10%;left:55%;height:260px;transform:rotate(35deg)"></div>
 </div>
 
+<!-- NAV -->
 <header class="relative z-20">
   <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
     <img src="assets/logo-horizontal.png" alt="Dentoflex.inp" class="h-7 w-auto md:h-8" />
@@ -106,6 +108,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
   </div>
 </header>
 
+<!-- HERO -->
 <section class="relative px-6 pt-6 pb-16 lg:px-10 lg:pt-12 lg:pb-20">
   <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-12">
     <div class="lg:col-span-6">
@@ -118,12 +121,9 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
         <span class="text-gradient mt-2 block">Abutment Triplo</span>
       </h1>
       <p class="reveal reveal-delay-2 mt-6 max-w-xl text-xl font-light text-muted-foreground md:text-2xl">A nova era da implantodontia</p>
-      <div class="reveal reveal-delay-3 mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-        <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer" class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-[#4DCBF6] to-[#0E7A9C] px-8 py-4 text-base font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.65_0.14_220/0.6)] transition-all hover:scale-[1.02]">
+      <div class="reveal reveal-delay-3 mt-8 hidden flex-col gap-4 sm:flex-row sm:items-center lg:flex">
+        <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer" class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-primary to-accent px-8 py-4 text-base font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.65_0.14_220/0.6)] transition-all hover:scale-[1.02]">
           Fale com um especialista
-        </a>
-        <a href="tel:+5511995898239" class="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-base font-medium backdrop-blur-md transition-all hover:border-primary/50 hover:bg-primary/10">
-          +55 (11) 99589-8239
         </a>
       </div>
     </div>
@@ -136,10 +136,16 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
         <img src="assets/produto.png" alt="T CONNECT" class="float-slow relative z-10 h-full w-full object-contain drop-shadow-[0_20px_60px_oklch(0.65_0.14_220/0.5)]" />
       </div>
     </div>
+    <div class="reveal reveal-delay-3 mt-8 flex justify-center lg:hidden">
+      <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer" class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-primary to-accent px-8 py-4 text-base font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.65_0.14_220/0.6)] transition-all hover:scale-[1.02]">
+        Fale com um especialista
+      </a>
+    </div>
   </div>
   <div class="tech-line mx-auto mt-12 max-w-7xl"></div>
 </section>
 
+<!-- APRESENTAÇÃO -->
 <section class="relative px-6 py-16 lg:px-10 lg:py-24">
   <div class="mx-auto max-w-7xl">
     <div class="mx-auto mb-14 max-w-4xl text-center">
@@ -192,6 +198,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
   </div>
 </section>
 
+<!-- DIFERENCIAIS -->
 <section class="relative px-6 py-16 lg:px-10 lg:py-24">
   <div class="mx-auto max-w-7xl">
     <div class="mb-12 max-w-3xl">
@@ -203,6 +210,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
   </div>
 </section>
 
+<!-- AUTORIDADE CIENTÍFICA -->
 <section class="relative px-6 py-16 lg:px-10 lg:py-24">
   <div class="mx-auto max-w-7xl">
     <div class="mb-12 text-center">
@@ -212,6 +220,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
       </p>
     </div>
 
+    <!-- Charts carousel -->
     <div class="mx-auto max-w-5xl">
       <div class="glass-strong relative overflow-hidden rounded-2xl p-5 md:p-6">
         <div class="mb-4 flex items-center justify-between border-b border-white/10 pb-4">
@@ -244,7 +253,9 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
       <p class="mt-8 text-2xl font-semibold text-gradient-cyan md:text-3xl">Ciência aplicada e validada na prática clínica.</p>
     </div>
 
+    <!-- Papers desktop -->
     <div id="papers-grid" class="mt-14 hidden gap-6 md:grid md:grid-cols-3"></div>
+    <!-- Papers mobile carousel -->
     <div class="mt-10 md:hidden">
       <div class="relative">
         <div class="overflow-hidden">
@@ -260,6 +271,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
   </div>
 </section>
 
+<!-- CONEXÃO COM O EVENTO -->
 <section class="relative px-6 py-16 lg:px-10 lg:py-24">
   <div class="mx-auto max-w-7xl">
     <div class="glass-strong relative overflow-hidden rounded-3xl p-8 md:p-14">
@@ -311,6 +323,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
   </div>
 </section>
 
+<!-- CTA FINAL -->
 <section class="relative px-6 py-16 lg:px-10 lg:py-28">
   <div class="mx-auto max-w-5xl text-center">
     <h2 class="text-4xl font-bold leading-tight md:text-6xl lg:text-7xl">
@@ -321,7 +334,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
       Fale agora com um especialista<br class="hidden sm:block" /> e descubra como integrar o T Connect à sua prática
     </p>
     <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-      <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer" class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-[#4DCBF6] to-[#0E7A9C] px-10 py-5 text-lg font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.65_0.14_220/0.6)] transition-all hover:scale-[1.02]">
+      <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer" class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-primary to-accent px-10 py-5 text-lg font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.65_0.14_220/0.6)] transition-all hover:scale-[1.02]">
         Entre em contato
       </a>
     </div>
