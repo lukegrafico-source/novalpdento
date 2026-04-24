@@ -78,21 +78,6 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
 @keyframes pulse-glow{0%,100%{box-shadow:0 0 30px oklch(0.65 0.14 220 / .25)}50%{box-shadow:0 0 60px oklch(0.65 0.14 220 / .5)}}
 .pulse-glow{animation:pulse-glow 4s ease-in-out infinite}
 .line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-
-/* Botão ciano principal */
-.btn-cyan {
-  background: linear-gradient(135deg, #2ee8f5 0%, #00bcd4 60%, #0097a7 100%);
-  color: #0a1628;
-  font-weight: 700;
-  border: none;
-  box-shadow: 0 8px 32px -4px rgba(0,188,212,0.55), 0 2px 8px -2px rgba(0,188,212,0.3);
-  transition: transform 0.18s, box-shadow 0.18s, filter 0.18s;
-}
-.btn-cyan:hover {
-  transform: scale(1.03);
-  filter: brightness(1.08);
-  box-shadow: 0 12px 40px -4px rgba(0,188,212,0.70);
-}
 </style>
 </head>
 <body>
@@ -135,16 +120,12 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
         <span class="text-gradient-cyan block">T CONNECT</span>
         <span class="text-gradient mt-2 block">Abutment Triplo</span>
       </h1>
-      <p class="reveal reveal-delay-2 mt-6 max-w-xl text-lg font-light text-muted-foreground md:text-xl">A nova era da implantodontia</p>
+      <p class="reveal reveal-delay-2 mt-6 max-w-xl text-xl font-light text-muted-foreground md:text-2xl">A nova era da implantodontia</p>
       <div class="reveal reveal-delay-3 mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-        <!-- BOTÃO HERO — CIANO -->
-        <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer"
-           class="btn-cyan group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-8 py-4 text-base">
+        <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer" class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-primary to-accent px-8 py-4 text-base font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.65_0.14_220/0.6)] transition-all hover:scale-[1.02]">
           Fale com um especialista
         </a>
-        <!-- BOTÃO TELEFONE — mantido original -->
-        <a href="tel:+5511995898239"
-           class="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-base font-medium backdrop-blur-md transition-all hover:border-primary/50 hover:bg-primary/10">
+        <a href="tel:+5511995898239" class="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/5 px-6 py-4 text-base font-medium backdrop-blur-md transition-all hover:border-primary/50 hover:bg-primary/10">
           +55 (11) 99589-8239
         </a>
       </div>
@@ -204,7 +185,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
                 <span class="text-gradient-cyan">Tecnologia que expande</span>
                 <span class="text-gradient">os horizontes clínicos da reabilitação oral.</span>
               </h3>
-              <p class="mt-5 text-sm leading-relaxed text-muted-foreground md:text-base">
+              <p class="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
                 Engenharia de precisão pensada para entregar previsibilidade, estabilidade e desempenho biomecânico em casos complexos.
               </p>
             </div>
@@ -232,7 +213,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
   <div class="mx-auto max-w-7xl">
     <div class="mb-12 text-center">
       <h2 class="text-4xl font-bold leading-tight md:text-6xl"><span class="text-gradient">Desempenho comprovado</span></h2>
-      <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+      <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground md:text-2xl">
         O T Connect foi avaliado por meio de análises por elementos finitos (FEA), simulando diferentes condições clínicas e cargas mastigatórias.
       </p>
     </div>
@@ -257,13 +238,13 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
     </div>
 
     <div class="mt-12 grid gap-6 md:grid-cols-3">
-      <div class="glass rounded-2xl p-6"><div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">✓</div><p class="text-sm leading-relaxed text-foreground/90">Distribuição equilibrada de tensões no sistema</p></div>
-      <div class="glass rounded-2xl p-6"><div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">✓</div><p class="text-sm leading-relaxed text-foreground/90">Comportamento biomecânico estável em diferentes materiais</p></div>
-      <div class="glass rounded-2xl p-6"><div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">✓</div><p class="text-sm leading-relaxed text-foreground/90">Níveis de estresse dentro de limites clinicamente aceitáveis</p></div>
+      <div class="glass rounded-2xl p-6"><div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">✓</div><p class="text-base leading-relaxed text-foreground/90 md:text-lg">Distribuição equilibrada de tensões no sistema</p></div>
+      <div class="glass rounded-2xl p-6"><div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">✓</div><p class="text-base leading-relaxed text-foreground/90 md:text-lg">Comportamento biomecânico estável em diferentes materiais</p></div>
+      <div class="glass rounded-2xl p-6"><div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">✓</div><p class="text-base leading-relaxed text-foreground/90 md:text-lg">Níveis de estresse dentro de limites clinicamente aceitáveis</p></div>
     </div>
 
     <div class="mx-auto mt-14 max-w-4xl text-center">
-      <p class="text-lg leading-relaxed text-muted-foreground md:text-xl">
+      <p class="text-lg leading-relaxed text-muted-foreground md:text-2xl">
         Estudos clínicos demonstram baixa perda óssea marginal ao longo do tempo, condições peri-implantares estáveis e alta previsibilidade em reabilitações com múltiplas coroas sobre um único implante.
       </p>
       <div class="tech-line mx-auto mt-8 w-32"></div>
@@ -300,7 +281,7 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
             <span class="text-gradient-cyan">O Sobrapi 2026</span>
             <span class="text-gradient mt-2 block">marca este momento</span>
           </h2>
-          <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
             O T Connect será apresentado ao público especializado durante o
             <span class="font-semibold text-foreground"> 31º Congresso Brasileiro de Periodontia e Implantodontia.</span>
           </p>
@@ -347,13 +328,11 @@ body{font-family:"Cairo",system-ui,sans-serif;background:var(--background);color
       <span class="text-gradient">Leve sua performance clínica</span>
       <span class="text-gradient-cyan mt-3 block">ao próximo nível</span>
     </h2>
-    <p class="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
+    <p class="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-2xl">
       Fale agora com um especialista<br class="hidden sm:block" /> e descubra como integrar o T Connect à sua prática
     </p>
     <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-      <!-- BOTÃO CTA — CIANO -->
-      <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer"
-         class="btn-cyan group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full px-10 py-5 text-lg">
+      <a href="https://wa.me/5511995898239" target="_blank" rel="noreferrer" class="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-primary to-accent px-10 py-5 text-lg font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.65_0.14_220/0.6)] transition-all hover:scale-[1.02]">
         +55 (11) 99589-8239
       </a>
     </div>
@@ -395,7 +374,7 @@ document.getElementById('diferenciais').innerHTML = diffs.map((it,i)=>`
       </div>
       <h3 class="text-xl font-bold leading-tight text-gradient">${it.t}</h3>
       <div class="my-5 h-px w-10 bg-primary/40"></div>
-      <p class="text-sm leading-relaxed text-muted-foreground">${it.d}</p>
+      <p class="text-base leading-relaxed text-muted-foreground md:text-lg">${it.d}</p>
     </div>
   </div>`).join('');
 
